@@ -1,3 +1,12 @@
+//This javascript code deals with:
+// Colors, Zoom, size
+// Events such as: MouseOut, MouseOver, and Click events.
+
+//Problem with click events is on Line 462. Click functions are defined starting this line.
+//Mouseover starts at Line 429 which works as designed.
+// Every other element of this code works as expected.
+
+
 (function ($) {
 
   var apiParams = {
@@ -14,7 +23,8 @@
     selectedRegions: 1,
     multiSelectRegion: 1
   };
-
+  
+// MAP EVENTS
   var apiEvents = {
     onLabelShow: 'labelShow',
     onRegionOver: 'region',
@@ -24,6 +34,8 @@
     onRegionDeselect: 'regionDeselect'
   };
 
+  //Function implemented to get map from JqueryVectorMap.js
+  //Adds map 
   $.fn.vectorMap = function (options) {
 
     var defaultParams = {
@@ -71,6 +83,7 @@
     this.mode = window.SVGAngle ? 'svg' : 'vml';
     this.params = params;
 
+    //When using SVG file ~ 
     if (this.mode == 'svg') {
       this.createSvgNode = function (nodeName) {
         return document.createElementNS(this.svgns, nodeName);
@@ -345,6 +358,7 @@
     }).replace(/z/g, '');
   };
 
+  //Unused Snippet ~ copied as part of the file
   var WorldMap = function (params) {
     params = params || {};
     var map = this;
@@ -411,6 +425,11 @@
 
       jQuery(this.rootGroup).append(path);
     }
+    
+    
+    //MOUSEOVER EVENT STARTS HERE, 
+    //Region Mouseover is defined as the specefic nodes (regions of the map)
+    //on Mouseover --> Highlight the node
 
     jQuery(params.container).delegate(this.canvas.mode == 'svg' ? 'path' : 'shape', 'mouseover mouseout', function (e) {
       var path = e.target,
@@ -441,6 +460,10 @@
         jQuery(params.container).trigger('regionMouseOut.jqvmap', [code, mapData.pathes[code].name]);
       }
     });
+    
+    //CLICK FUNCTION DEFINED HERE
+    // DEBUGGED USING console.log 
+    //Error: regionClick is not defined
 
     jQuery(params.container).delegate(this.canvas.mode == 'svg' ? 'path' : 'shape', 'click', function (e) {
       if (!params.multiSelectRegion) {
