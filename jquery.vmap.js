@@ -23,8 +23,7 @@
     selectedRegions: 1,
     multiSelectRegion: 1
   };
-  
-// MAP EVENTS
+
   var apiEvents = {
     onLabelShow: 'labelShow',
     onRegionOver: 'region',
@@ -34,8 +33,6 @@
     onRegionDeselect: 'regionDeselect'
   };
 
-  //Function implemented to get map from JqueryVectorMap.js
-  //Adds map 
   $.fn.vectorMap = function (options) {
 
     var defaultParams = {
@@ -43,7 +40,7 @@
       backgroundColor: '#a5bfdd',
       color: '#f4f3f0',
       hoverColor: '#c9dfaf',
-      selectedColor: '#c9dfaf',
+      selectedColor: 'blue',
       scaleColors: ['#b6d6ff', '#005ace'],
       normalizeFunction: 'linear',
       enableZoom: true,
@@ -51,9 +48,16 @@
       borderColor: '#818181',
       borderWidth: 1,
       borderOpacity: 0.25,
+    //  regionSelect: 'true',
+      //regionClick: 'true',
       selectedRegions: null,
       multiSelectRegion: false
+
+
+
     }, map = this.data('mapObject');
+
+
 
     if (options === 'addMap') {
       WorldMap.maps[arguments[1]] = arguments[2];
@@ -83,7 +87,6 @@
     this.mode = window.SVGAngle ? 'svg' : 'vml';
     this.params = params;
 
-    //When using SVG file ~ 
     if (this.mode == 'svg') {
       this.createSvgNode = function (nodeName) {
         return document.createElementNS(this.svgns, nodeName);
@@ -358,7 +361,6 @@
     }).replace(/z/g, '');
   };
 
-  //Unused Snippet ~ copied as part of the file
   var WorldMap = function (params) {
     params = params || {};
     var map = this;
@@ -425,11 +427,6 @@
 
       jQuery(this.rootGroup).append(path);
     }
-    
-    
-    //MOUSEOVER EVENT STARTS HERE, 
-    //Region Mouseover is defined as the specefic nodes (regions of the map)
-    //on Mouseover --> Highlight the node
 
     jQuery(params.container).delegate(this.canvas.mode == 'svg' ? 'path' : 'shape', 'mouseover mouseout', function (e) {
       var path = e.target,
@@ -441,6 +438,8 @@
         jQuery(params.container).trigger(regionMouseOverEvent, [code, mapData.pathes[code].name]);
         if (!regionMouseOverEvent.isDefaultPrevented()) {
           map.highlight(code, path);
+
+
         }
 
         if (params.showTooltip) {
@@ -460,10 +459,6 @@
         jQuery(params.container).trigger('regionMouseOut.jqvmap', [code, mapData.pathes[code].name]);
       }
     });
-    
-    //CLICK FUNCTION DEFINED HERE
-    // DEBUGGED USING console.log 
-    //Error: regionClick is not defined
 
     jQuery(params.container).delegate(this.canvas.mode == 'svg' ? 'path' : 'shape', 'click', function (e) {
       if (!params.multiSelectRegion) {
@@ -472,7 +467,7 @@
           map.countries[key].setFill(map.countries[key].getOriginalFill());
         }
       }
-
+regionClickEvent = $.Event('regionClick.jqvmap');
       var path = e.target;
       var code = e.target.id.split('_').pop();
 
@@ -480,8 +475,12 @@
       if (!regionClickEvent.isDefaultPrevented()) {
         if (map.selectedRegions.indexOf(code) !== -1) {
           map.deselect(code, path);
+          map.label.show(code,path);
         } else {
           map.select(code, path);
+console.log("bitches");
+        //  window.open('http://stackoverflow.com/', '_blank');
+
         }
       }
 
@@ -1111,3 +1110,4 @@
   };
 
 })(jQuery);
+
