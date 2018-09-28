@@ -1,5 +1,7 @@
 # Use any .png or .jpg image to convert into a javascript annotable file/map.
 
+https://medium.com/@gautamtata/build-and-add-ui-events-to-your-own-maps-6ec83bbd8d3 for a simple tutorial
+
 1. Convert your .png or jpeg/.jpg image to a .SVG extention.
 2. Get the source code of your SVG: I used this great online tool http://editor.method.ac/ to get the source code.
 
