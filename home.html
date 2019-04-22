@@ -1,33 +1,85 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>EXAMPLE OF JAVASCRIPT ANNOTABLE MAPS</title>
-    </head>
-    <body>
-        <p> This is a map of new Delhi india. <p>
-        <div> <p> You can easily create annotable maps by using the javascript files <p> </div>
-        
-        <div id = "github">  https://github.com/gautamtata/JavascriptAnnotableMaps </div>
-        
-        <div> <p>
+<html lang="en">
+  <head>
+    <title>JavaScript Annotatable Maps</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+   
+    
+   
+
+    <div class="intro-section" id="home-section">
+      
+      <div class="slide-1" style="background: #1D976C;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #93F9B9, #1D976C);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #93F9B9, #1D976C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+" data-stellar-background-ratio="0.5">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-12">
+              <div class="row align-items-center">
+                <div class="col-lg-6 mb-4">
+                  <h1  data-aos="fade-up" data-aos-delay="100">JavaScript Annotatble Maps</h1>
+                  <p class="mb-4"  data-aos="fade-up" data-aos-delay="200">
+                  	Make building maps easier. Just upload SVG data and convert it into usable, interactive maps.
+                  </p>
+                 
+
+                </div>
+
+                <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="500">
+                  <div id="vmap" style="width: 400px; height: 400px;"></div>
+                  <div id="map" style="width: 400px; height: 400px;"></div>
+                </div>
+              </div>
+            </div>
             
+          </div>
+        </div>
+      </div>
+    </div>
 
-1. Get the source code of your SVG: I used this great online tool http://editor.method.ac/ to get the source code. 
-            <br />
+    
+    
 
-2. Another great tool available is the svg to Vectormap source code converter. Using this tool it is possible to get the VectorMap code online : http://svg.wangxingrong.com/ //copyrights wangxingrong
-<br />
-3. Jquery.VectorMap.js is responsible for the structural design of the map. It annotates nodes as paths from an .SVG file and gives a vecotor map which is annotatable using JS. Replace my code with your source code obtained from (http://svg.wangxingrong.com/).
-<br />
-4. jquery.vmap.js is responsible for events on the map such as Zoom, highlighting, colors and Click events such as mouseOver and click. The default params function which gives basic instructions for map events is implemented with changes such as name of map and path names as defined in jQueryVectorMap.js
-        <br />
-            </p> </div>
-<div id="vmap" style="width: 400px; height: 400px;"></div>
-        
-        
-        <div id="map" style="width: 400px; height: 400px;"></div>
+  
+    
+  </div> <!-- .site-wrap -->
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
 <script src="./jquery.vmap.js"></script>
 <script src= "./jQueryVectorMap.js"></script>
     <script src= "./jQueryVectorMapCA.js"></script>
@@ -55,11 +107,24 @@ scaleColors: ['#b6d6ff', '#005ace'],
 selectedColor: 'red',
 selectedRegion: null,
 showTooltip: true
-
 });
 });
 </script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/bootstrap-datepicker.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
 
-    </body>
-
+  
+  <script src="js/main.js"></script>
+    
+  </body>
 </html>
