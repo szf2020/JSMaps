@@ -478,7 +478,7 @@ regionClickEvent = $.Event('regionClick.jqvmap');
           map.label.show(code,path);
         } else {
           map.select(code, path);
-console.log("bitches");
+
         //  window.open('http://stackoverflow.com/', '_blank');
 
         }
