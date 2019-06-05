@@ -20,7 +20,6 @@ The purpose of this project was to implement a tool that lets users build maps w
 Examples of events here : Hover Color, Background Color, Show-Tooltip, Zoom and normalizeFunction.
 
 **Interaction Features**
---Drag panning with inertia
 --Scroll wheel zoom
 --Double click zoom
 --Zoom to area 
