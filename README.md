@@ -19,3 +19,20 @@ The purpose of this project was to implement a tool that lets users build maps w
 
 Examples of events here : Hover Color, Background Color, Show-Tooltip, Zoom and normalizeFunction.
 
+**Interaction Features**
+--Drag panning with inertia
+--Scroll wheel zoom
+--Double click zoom
+--Zoom to area 
+--Keyboard navigation
+--Events: click, mouseover, etc.
+--Marker dragging
+
+**Visual Features**
+--Zoom animation
+--popup fade animation
+--Very nice default design for markers
+
+**Customization Features**
+--Pure CSS3 popups and controls for easy restyling
+--Image- and HTML-based markers
