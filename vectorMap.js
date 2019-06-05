@@ -1,6 +1,4 @@
-//This File implements the structure of a map from an .SVG file.
-// jquery.vmap.js uses name of map and path names from this file.
-// This function works as designed.
+// Paste your jvectorMap code here
 jQuery.fn.vectorMap('addMap', 'map', {
     "width": "700",
     "height": "702",

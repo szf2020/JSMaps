@@ -27,26 +27,58 @@
     
   </head>
   <body>
+
+
+        <nav class="navbar">
+          <span class="navbar-toggle" id="js-navbar-toggle">
+              <i class="fas fa-bars"></i>
+          </span>
+          <a href="home.html" class="logo">JSMaps</a>
+          <ul class="main-nav" id="js-menu">
+              <li>
+                  <a href="README.md" class="nav-links">Docs</a>
+              </li>
+              <li>
+                <a href="./svgToVectorMap/index.html" class="nav-links">SVG to JvectorMap</a>
+              </li>
+              <li>
+                  <a href="http://www.gautamtata.com" class="nav-links">About me</a>
+              </li>
+              <li>
+                <a href="https://github.com/gautamtata/JavascriptAnnotableMaps" class="nav-links">Github</a>
+            </li>
+              <li>
+                  <a href="mailto:gautam@gautamtata.com" class="nav-links">Contact Me</a>
+              </li>
+              <li>
+                  <a href="https://medium.com/@gautamtata/build-and-add-ui-events-to-your-own-maps-6ec83bbd8d3" class="nav-links">Blog</a>
+              </li>
+          </ul>
+        </nav>
+        
   
- 
-  
-       <div class="slide-1" style="background: linear-gradient(to right, #8E54E9, #4776E6);" >
+       <div class="slide-1" >
         <div class="container">
           <div class="row align-items-center">
             <div class="col-12">
               <div class="row align-items-center">
                 <div class="col-lg-6 mb-4">
-                  <h1  data-aos="fade-up" data-aos-delay="100">JavaScript Annotatble Maps</h1>
-                  <p class="mb-4"  data-aos="fade-up" data-aos-delay="200">
+                  <h1  data-aos="fade-up" style = "color: white" data-aos-delay="100">JavaScript Annotatble Maps</h1>
+                  <p class="mb-4" style = "color: white" data-aos="fade-up" data-aos-delay="200">
                   	Make building maps easier. Just upload SVG data and convert it into usable, interactive maps.
                   </p>
-                  <p class="mb-4"  data-aos="fade-up" data-aos-delay="200"> Hover,Click, Build </p>
-                 <p data-aos="fade-up" data-aos-delay="300"><a href="https://github.com/gautamtata/JavascriptAnnotableMaps" class="btn btn-primary py-3 px-5 btn-pill">Github</a></p>
+                  <p class="mb-4"  data-aos="fade-up" data-aos-delay="200" style = "color: white"> Hover,Click, Build </p>
+                 <p data-aos="fade-up" data-aos-delay="300"><a href="https://github.com/gautamtata/JavascriptAnnotableMaps" class="btn btn-primary py-3 px-5 btn-pill">Start Building</a></p>
+                 
 
                 </div>
                
                 
-                  <div id="vmap" style="width: 350px; height: 600px; background: linear-gradient(to right, #3CD3AD, #4CB8C4);: "></div>
+                  <div id="vmap" style="width: 487px; height: 500px; position: relative; left: 100px; top: 50px; background: #457fca;  /* fallback for old browsers */
+                  background: -webkit-linear-gradient(to right, #5691c8, #457fca);  /* Chrome 10-25, Safari 5.1-6 */
+                  background: linear-gradient(to right, #5691c8, #457fca); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                  ; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                  "></div>
                  
                 
               </div>
@@ -67,7 +99,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 
 <script>
-window.jQuery || document.write('<script src="http://mysite.com/jquery.min.js"><\/script>'))
+window.jQuery || document.write('<script src="http://mysite.com/jquery.min.js"><\/script>')
 </script>
 <script src="./jquery.vmap.js"></script>
 <script src= "./vectorMap.js"></script>
@@ -92,27 +124,7 @@ window.jQuery || document.write('<script src="http://mysite.com/jquery.min.js"><
 
   
   <script src="js/main.js"></script>
-    <script type="text/javascript">
-jQuery(document).ready(function() {
-jQuery('#vmap').vectorMap(
-{
-map: 'map',
-backgroundColor: 'white',
-borderColor: '#818181',
-borderOpacity: 0.25,
-borderWidth: 1,
-color: '#ffff000',
-enableZoom: true,
-hoverColor: 'grey',
-hoverOpacity: null,
-normalizeFunction: 'linear',
-scaleColors: ['#b6d6ff', '#005ace'],
-selectedColor: 'red',
-selectedRegion: null,
-showTooltip: true
-});
-});
-</script>
+
     
   </body>
 </html>

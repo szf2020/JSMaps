@@ -2,14 +2,20 @@
 
 https://medium.com/@gautamtata/build-and-add-ui-events-to-your-own-maps-6ec83bbd8d3 for a simple tutorial
 
-1. Convert your .png or jpeg/.jpg image to a .SVG extention.
-2. Get the source code of your SVG: I used this great online tool http://editor.method.ac/ to get the source code.
+The purpose of this project was to implement a tool that lets users build maps which are interactive and usable from plain SVG data.
 
-3. Another great tool available is the svg to Vectormap source code converter. Using this tool it is possible to get the VectorMap code online : http://svg.wangxingrong.com/
-//copyrights wangxingrong
+**HOW TO USE**
+1. Have the SVG file for the map you want to build. 
+    If you have the map in png/jpeg you can convert it to SVG here : https://image.online-convert.com/convert-to-svg
 
-Jquery.VectorMap.js is responsible for the structural design of the map. It annotates nodes as *paths* from an .SVG file and gives a vecotor map which is annotatable using JS. Replace my code with your source code obtained from (http://svg.wangxingrong.com/).
+2. From the homescreen, navigate to SVG to JvectorMap. 
 
-jquery.vmap.js is responsible for events on the map such as Zoom, highlighting, colors and Click events such as mouseOver and click. The default params function which gives basic instructions for map events is implemented with changes such as name of map and path names as defined in jQueryVectorMap.js
+    Give the elements an Id and a name and paste your svg into the textbox.
+    Click on convert to map and you should have your svg converted into JvectorMap.
 
-// * Copyright 2012, Peter Schmalfeldt <manifestinteractive@gmail.com>* Copyright 2011-2012, Kirill Lebedev
+3. Copy the code from the JvectorMap and replace it with in the file vectorMap.js.
+    **Make sure to change the word paths to pathes in line 5**
+4. Basic annotations can be made in the file jquery.vmap.js
+
+Examples of events here : Hover Color, Background Color, Show-Tooltip, Zoom and normalizeFunction.
+

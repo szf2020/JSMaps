@@ -6,6 +6,26 @@
 //Mouseover starts at Line 429 which works as designed.
 // Every other element of this code works as expected.
 
+jQuery(document).ready(function() {
+jQuery('#vmap').vectorMap(
+{
+map: 'map',
+backgroundColor: 'yellow',
+borderColor: '#818181',
+borderOpacity: 0.25,
+borderWidth: 1,
+color: '#ffff000',
+enableZoom: true,
+hoverColor: 'white',
+hoverOpacity: null,
+normalizeFunction: 'linear',
+scaleColors: ['#b6d6ff', '#005ace'],
+selectedColor: 'yellow',
+selectedRegion: null,
+showTooltip: true
+});
+});
+
 
 (function ($) {
 
